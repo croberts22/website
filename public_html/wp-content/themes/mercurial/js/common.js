@@ -242,11 +242,21 @@ jQuery(document).ready(function ($) {
         });
 
         // open slidebox on portfolio item click
-        //$('.portfolio .items .hentry').slidebox();
-        //$('.portfolio .items .hentry').on('click', function () {
-        //    $(this).find('.x-preloader').show();
-        //    return false
-        //})
+        //        $('.portfolio .items .hentry').slidebox();
+        //        $('.portfolio .items .hentry').on('click', function () {
+        //            $(this).find('.x-preloader').show();
+        //            return false
+        //        })
+
+        // $('.portfolio .items .hentry').slidebox();
+        /*
+        $('.portfolio .items .hentry').on('click', function () {
+            window.location = $(this).find('a.thumb').attr('href');
+        })
+        $('.portfolio .items .hentry a').on('click', function (e) {
+            e.preventDefault();
+        })
+        */
     }
     Portfolio.resize = function () {
         if (Portfolio.portContainer.hasClass('isotope')) Portfolio.portContainer.isotope('reLayout');

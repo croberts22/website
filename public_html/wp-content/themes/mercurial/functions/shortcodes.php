@@ -149,7 +149,7 @@ function coll_portfolio($atts, $content = null)
         // get thumbnail
 
         $thumb = get_post_meta(get_the_ID(), 'thumbnail', true);
-
+		$lproj = get_post_meta(get_the_ID(), 'url', true); 
         $cols = 'coll-' . $columns;
 
         // build
@@ -157,8 +157,8 @@ function coll_portfolio($atts, $content = null)
         $output .= "<article id='" . $post->post_name . "' class='" . join(" ", get_post_class($cols)) . "'>";
 
         $output .= '<div class="wrapper">';
-
-        $output .= '<a class="thumb" href="' . get_permalink(get_the_ID()) . '">';
+		$output .= '<a class="thumb" href="' . $lproj . '" target="_blank">'; 
+        //$output .= '<a class="thumb" href="' . get_permalink(get_the_ID()) . '">';
 
         $output .= '<span class="x-preloader"></span>';
 
